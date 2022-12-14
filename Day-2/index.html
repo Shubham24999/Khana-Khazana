@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Khana Khajana</title>
+    <style>
+        *{
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+        }
+        #container{
+            width: 90%;
+            margin: auto;
+        }
+        #header{
+            display: grid;
+            /* grid-template-columns: 350px 300px 250px; */
+            height: 140px;
+            grid-template-columns:35% 25% 20%;
+            gap: 90px;
+            /* border: 1px solid red; */
+        }
+        #header img{
+            width: 60%;
+            
+        }
+        #header div{
+            /* border: 1px solid blue; */
+            height: 120px;
+        }
+        #header div img:hover{
+            cursor: pointer;
+        }
+        #header div:nth-child(1){
+            margin-left: 20px;
+            margin-top: 5px;
+            margin-bottom: 10px;
+        }
+        #header div:nth-child(1) img{
+            height: 90px;
+            width: 100%;
+            height: 130px;
+        }
+        #header div:nth-child(2){
+            display: flex;
+            align-items: center;
+            margin: 10px 0px;
+            /* border:1px solid black; */
+        }
+        #header div:nth-child(2) img{
+            /* border: 1px solid green; */
+            margin: 5px;
+            width: 30%;
+            height: 70px;
+            border-radius: 50%;
+            
+        }
+        #header div:nth-child(3){
+            /* border: 1px solid blue; */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            justify-content: space-around;
+            margin: 10px 0px 10px 0px;
+        }
+        #header div:nth-child(3) button:hover{
+            cursor: pointer;
+        }
+        #nav{
+            display: flex;
+            background-color: #2bb673;
+            height: 40px;
+            justify-content: space-around;
+            align-items: center;
+        }
+        #nav a{
+            color: white;
+            /* font-weight:normal; */
+            font-family: 'Roboto', Arial, Helvetica, sans-serif;
+            text-decoration:none ;
+        }
+        #content-box{
+            width: 90%;
+            margin: auto;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        }
+        #content-box > div:nth-child(1) img:nth-child(1){
+            width: 68%;
+            height: 350px;
+        }
+        #content-box > div:nth-child(1) img:nth-child(2){
+            width: 30%;
+            height: 350px;
+        }
+        #content-box > div:nth-child(2){
+            display: flex;
+            height: 140px;
+            /* grid-template-columns: repeat(7,1fr); */
+            justify-content: space-around;
+            align-items: center;
+            margin-left: 20px;
+            margin-right: 25px;
+
+        }
+        #content-box > div:nth-child(2) img{
+            width: 165px;
+            height: 100px;
+            border-radius: 10px;
+            padding: 5px;
+        }
+        .content-box-2{
+            /* border: 1px solid red; */
+            /* display: flex; */
+            width: 90%;
+            height: 300px;
+            margin: auto;
+            margin-top:30px;
+            margin-bottom: 30px;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        }
+        .content-box-2 p:hover{
+            cursor: pointer;
+        }
+        .content-box-2 > div:nth-child(1){
+            display: flex;
+            height: 40px;
+            justify-content: space-between;
+            /* border: 1px solid blue; */
+            align-items: center;
+            margin-right: 30px;
+        }
+        .content-box-2 > div:nth-child(1) div:nth-child(1){
+            /* border: 1px solid red; */
+            margin-left: 10px;
+        }
+        .content-box-2 > div:nth-child(1) div:nth-child(2){
+            width: 600px;
+            display: flex;
+            justify-content: space-between;
+            color: blue;
+            /* border: 1px solid red; */
+        }
+        .content-box-2 > div:nth-child(2){
+            display: grid;
+            grid-template-columns: repeat(5,1fr);
+            gap: 15px;
+            margin: 30px 20px;
+            text-align: center;
+        }
+        .content-box-2 img{
+            width: 100%;
+            height: 180px;
+            border-radius: 10px;
+        }
+        #middle-box h1,h3,h5,p{
+            text-align: center;
+        }
+        #middle-box > div:nth-child(2){
+            width: 70%;
+            margin: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* justify-content: space-around; */
+            
+        }
+        #middle-box > div:nth-child(2) img{
+            width: 280px;
+            height: 50px;
+            margin: 15px;
+        }
+        #middle-box > div:nth-child(4){
+            margin-top: 20px;
+            margin-bottom: 20px;
+            display: flex; 
+            width: 90%;    
+            margin: auto;     
+            /* grid-template-columns: repeat(4 ,1fr); */
+            /* gap: 20px; */
+            justify-content: space-between;
+            height: 190px;
+            margin-bottom: 20px;
+        }
+        #middle-box > div:nth-child(4) div{
+            /* border: 1px solid blue; */
+            width: 23%;
+            border-radius: 10px;
+            padding: 10px;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        }
+        #middle-box > div:nth-child(4) img{
+            width: 150px;
+            height: 80px;
+            display: block;
+            margin: auto;
+            margin-top: 5px;
+            margin-bottom: 10px;
+        }
+        #middle-box > div:nth-child(5){
+            width: 70%;
+            height: 70px;
+            margin: auto;
+            text-align: center;
+        }
+        #middle-box > div:nth-child(6){
+            /* border: 1px solid red; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 480px;
+            height: 110px;
+            margin: auto;
+            margin-bottom: 15px;
+            background-color: #f53838;
+            border-radius: 10px;
+        }
+        #middle-box > div:nth-child(6) button{
+            background-color: #f53838;
+            width: 80%;
+            height: 60px;
+            color: white;
+            border: 0px;
+        }
+        #Upper_footer img{
+            width: 100%;
+            height: 240px;
+        }
+        #footer_b_1 img{
+            width: 100%;
+            height: 250px;
+            padding: 10px 10px 0px 10px;
+        }
+        #footer{
+            background-color: #2bb673;
+            height: 300px;
+            margin-top: 0px;
+            color: white;
+        }
+        #footer h5,h6:hover{
+            padding: 5px;
+            cursor: pointer;
+        }
+        /* #footer > div{
+            border: 1px solid red;
+        } */
+        /* #footer > div > div{
+            border: 1px solid red;
+
+        } */
+        #footer > div:nth-child(1){
+            display: grid;
+            grid-template-columns: repeat(5,1fr);
+            width: 90%;
+            gap: 30px;
+            margin: auto;
+            height: 200px;
+        }
+        #footer > div:nth-child(2){
+            width: 80%;
+            text-align: center;
+            margin: auto;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="header">
+            <div><img src="KHANAKHAJANAlogo.png" alt="error"></div>
+            <div>
+                <img src="https://www.kindmeal.my/images/follow_blog_grey.png" alt="error">
+                <img src="https://www.kindmeal.my/images/follow_facebook_grey.png" alt="error">
+                <img src="https://www.kindmeal.my/images/follow_twitter_grey.png" alt="error">
+            </div>
+            <div>
+                <button>Login</button>
+                <button>Sign up</button>
+            </div>
+        </div>
+    </div>    
+    <div id="nav">
+            <div><a href="#">Home</a></div>
+            <div><a href="#">Meals Deals</a></div>
+            <div><a href="#">KindMoments</a></div>
+            <div><a href="#">Recipes</a></div>
+            <div><a href="#">Directory</a></div>
+            <div><a href="#">Articles</a></div>
+            <div><a href="#">Mobile App</a></div>
+            <div><a href="#">Help</a></div>
+    </div>
+    <div id="content-box">
+        <div>
+            <img src="https://www.kindmeal.my/photos/deal/7/700-4802-m.jpg" alt="error">
+            <img src="https://www.kindmeal.my/photos/shop/6/623-4761-m.jpg" alt="error">
+        </div>
+        <div>
+            <img src="https://www.kindmeal.my/photos/item/0/451-5308-s.jpg" alt="error">
+            <img src="https://www.kindmeal.my/photos/item/0/451-5308-s.jpg" alt="error">
+            <img src="https://www.kindmeal.my/photos/item/0/451-5308-s.jpg" alt="error">
+            <img src="https://www.kindmeal.my/photos/item/0/451-5308-s.jpg" alt="error">
+            <img src="https://www.kindmeal.my/photos/item/0/451-5308-s.jpg" alt="error">
+            <img src="https://www.kindmeal.my/photos/item/0/451-5308-s.jpg" alt="error">
+            <img src="https://www.kindmeal.my/photos/item/0/451-5308-s.jpg" alt="error">
+        </div>
+    </div>
+    <div id="box1" class="content-box-2">
+            <div>
+                <div>
+                    Latest News & Videos  
+                 </div>
+                 <div>
+                     <a href="#">Save Lives with Your Blog </a>
+                     <a href="#">News & Articles</a>
+                     <a href="#">Follow Our Facebook</a>
+                 </div>
+            </div>
+            <div>
+               <div>
+                  <img src="https://www.kindmeal.my/photos/moment/24/24751-48149-s.jpg" alt="eror">
+                  <p>Sick Baby Cow Headbutts His Bffs All Day Now</p>
+                </div>
+                <div>
+                    <img src="https://www.kindmeal.my/photos/moment/24/24751-48149-s.jpg" alt="eror">
+                    <p>Sick Baby Cow Headbutts His Bffs All Day Now</p>
+                </div>
+                <div>
+                    <img src="https://www.kindmeal.my/photos/moment/24/24751-48149-s.jpg" alt="eror">
+                    <p>Sick Baby Cow Headbutts His Bffs All Day Now</p>
+                </div>
+                <div>
+                    <img src="https://www.kindmeal.my/photos/moment/24/24751-48149-s.jpg" alt="eror">
+                    <p>Sick Baby Cow Headbutts His Bffs All Day Now</p>
+                </div>
+                <div>
+                    <img src="https://www.kindmeal.my/photos/moment/24/24751-48149-s.jpg" alt="eror">
+                    <p>Sick Baby Cow Headbutts His Bffs All Day Now</p>
+                </div>
+            </div>
+    </div>
+    <div id="box2" class="content-box-2">
+        <div>
+            <div>
+                Discover Restaurants 
+             </div>
+             <div>
+                 <a href="#">Vegetarian Directory </a>
+                 <a href="#">  Restaurant Menu </a>
+                 <a href="#"> Food Map</a>
+             </div>
+        </div>
+        <div>
+           <div>
+              <img src="https://www.kindmeal.my/photos/moment/24/24753-48157-s.jpg" alt="eror">
+              <p>Pine 3 Vegetarian Restaurent</p>
+              <p>VyVain</p>
+            </div>
+            <div>
+                <img src="https://www.kindmeal.my/photos/moment/24/24753-48157-s.jpg" alt="eror">
+                <p>Pine 3 Vegetarian Restaurent</p>
+                <p>VyVain</p>
+              </div>
+              <div>
+                <img src="https://www.kindmeal.my/photos/moment/24/24753-48157-s.jpg" alt="eror">
+                <p>Pine 3 Vegetarian Restaurent</p>
+                <p>VyVain</p>
+              </div>
+              <div>
+                <img src="https://www.kindmeal.my/photos/moment/24/24753-48157-s.jpg" alt="eror">
+                <p>Pine 3 Vegetarian Restaurent</p>
+                <p>VyVain</p>
+              </div>
+              <div>
+                <img src="https://www.kindmeal.my/photos/moment/24/24753-48157-s.jpg" alt="eror">
+                <p>Pine 3 Vegetarian Restaurent</p>
+                <p>VyVain</p>
+              </div>
+        </div>
+    </div>
+    <div id="box3" class="content-box-2">
+        <div>
+            <div>
+                Yummylicious Moments  
+             </div>
+             <div>
+                 <a href="#">Secret Recipes </a>
+                 <a href="#">Member Hot Picks </a>
+                 <a href="#">Photo Moments</a>
+             </div>
+        </div>
+        <div>
+            <div>
+                <img src="https://www.kindmeal.my/photos/item/0/598-8528-s.jpg" alt="eror">
+                <p>Pine 3 Vegetarian Restaurent</p>
+            </div>
+            <div>
+                <img src="https://www.kindmeal.my/photos/item/0/598-8528-s.jpg" alt="eror">
+                <p>Pine 3 Vegetarian Restaurent</p>
+            </div>
+            <div>
+                <img src="https://www.kindmeal.my/photos/item/0/598-8528-s.jpg" alt="eror">
+                <p>Pine 3 Vegetarian Restaurent</p> 
+            </div>
+            <div>
+                <img src="https://www.kindmeal.my/photos/item/0/598-8528-s.jpg" alt="eror">
+                <p>Pine 3 Vegetarian Restaurent</p>
+            </div>
+            <div>
+                <img src="https://www.kindmeal.my/photos/item/0/598-8528-s.jpg" alt="eror">
+                <p>Pine 3 Vegetarian Restaurent</p>
+            </div>
+        </div>
+    </div>
+    <div id="box4" class="content-box-2">
+        <div>
+            <div>
+                Amazing Superheroes 
+             </div>
+             <div>
+                 <a href="#">Latest Buzz </a>
+                 <a href="#">  Lifestyle Ambassadors </a>
+                 <a href="#"> Win Gifts!</a>
+             </div>
+        </div>
+        <div>
+           <div>
+              <img src="https://www.kindmeal.my/photos/member/30/30634-m.jpg" alt="eror">
+              <p>SokFernGoh</p>
+            </div>
+            <div>
+                <img src="https://www.kindmeal.my/photos/member/30/30634-m.jpg" alt="eror">
+                <p>BeekuanTan</p>
+            </div>
+            <div>
+                <img src="https://www.kindmeal.my/photos/member/30/30634-m.jpg" alt="eror">
+                <p>LeeKuanTeck</p>
+            </div>
+            <div>
+                <img src="https://www.kindmeal.my/photos/member/30/30634-m.jpg" alt="eror">
+                <p>MokKahWai</p>
+            </div>
+            <div>
+                <img src="https://www.kindmeal.my/photos/member/30/30634-m.jpg" alt="eror">
+                <p>MokKahWai</p>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div id="middle-box">
+        <div><h1>Introducing Malaysia's Pioneering Meat-Free Lifestyle Platform</h1></div>
+        <div>
+            <span>Brought to you by</span>
+            <img src="https://www.kindmeal.my/images/logo-petfinder-v2.png" alt="">
+        </div>
+        <h5>Instant coupon & dining. No upfront coupon payment, booking or printing.</h5>
+        <div>
+            <div>
+                <img src="https://www.kindmeal.my/images/intro_deal.png" alt="">
+                <h3>Get Great Deals</h3>
+                <p>Show our FREE digital coupons to instantly enjoy exciting deals</p>
+            </div>
+            <div>
+                <img src="https://www.kindmeal.my/images/intro_kindmoment.png" alt="">
+                <h3>Share KindMoments</h3>
+                <p>Spread the joy by sharing your yummy dining moments</p>
+            </div>
+            <div>
+                <img src="https://www.kindmeal.my/images/intro_menu.png" alt="">
+                <h3>Discover Delicious Food</h3>
+                <p>Explore the latest exquisite offerings and creative menus</p>
+            </div>
+            <div>
+                <img src="https://www.kindmeal.my/images/intro_friends.png" alt="">
+                <h3>Meet Food Lovers</h3>
+                <p>Make new, compassionate friends and share great food tips</p>
+            </div>
+        </div>
+
+        <div>
+            <p>
+                Any restaurant or cafe can join KindMeal, vegetarian or not, as long as the deals and menu featured are meat-free.
+                Enjoy a great meat-free dining experience. Easily save animal lives, health, environment and money now!
+            </p>
+        </div>
+        <div>
+            <button>
+            
+                <h1>Join KindMeal Now</h1>
+                <h6>Your tasty journey begins here</h6>
+            </button>
+        </div>    
+        <p>Featured On</p>
+    </div>
+        
+    <div id="Upper_footer">
+        <img src="https://www.kindmeal.my/images/media-feature2.png" alt="error">      
+    </div>
+   <div id="footer_b_1">
+    <img src="https://www.kindmeal.my/images/banner_whykindmeal.png" alt="error">
+   </div>
+    <div id="footer">
+        <div>
+            <div>
+                <h5>GENERAL</h5>
+                <h6>Home</h6>
+                <h6>Up</h6>
+                <h6>Restaurateurs</h6>
+                <h6>Advertising</h6>
+                <h6>About KindMeal.my</h6>
+                <h6>Help & FAQ</h6>
+                <h6>Terms & Conditions</h6>
+                <h6>Inspiring Partners</h6>
+                <h6>Lifestyle Ambassadors</h6>
+                <h6>Jobs & Careers</h6>
+                <h6>Contact Us</h6>
+            </div>
+            <div>
+                <h5>Features</h5>
+                <h6>Meat-Free Deals</h6>
+                <h6>Tasty Menus</h6>
+                <h6>Kind Moments</h6>
+                <h6>Meat-Free Recipes</h6>
+                <h6>Member Recommendations</h6>
+                <h6>Featured Restaurants</h6>
+                <h6>Vegetarian & Vegan Directory</h6>
+                <h6>Food Map</h6>
+                <h6>Become A Superhero</h6>
+                <h6>Vegan News & Vegetarian Articles</h6>
+                <h6>Latest Comments</h6>
+            </div>
+            <div>
+                <h5>Social Media</h5>
+                <h6>KindMeal Widget</h6>
+                <h6>Facebook</h6>
+                <h6>Twitter</h6>
+                <h6>Instagram</h6>
+            </div>
+            <div>
+                <div>
+                    <h5>Mobile</h5>
+                   <h6>iPhone & iPod App</h6>
+                   <h6>Andriod App</h6>
+                </div>
+                <br>
+                <div>
+                    <h5>Exciting Promos</h5>
+                    <h6>Gadhimai: Ending Mass Slaughter</h6>
+                    <h6>Free Meals</h6>
+                    <h6>Food Bloggers</h6>
+                    <h6>Uber CHIRP</h6>
+                    <h6>Jane Goodall Contest</h6>
+                    <h6>Win Digi iPhone 6</h6>
+                    <h6>Feed The Poor</h6>
+                    <h6>Win Superhero Gifts</h6>
+                    <h6>Win an iPad Mini 3</h6>
+                </div>
+            </div>
+            <div>
+                <h5>PetFinder.my</h5>
+                <h6>Adopt A Pet</h6>
+                <h6>Smartphone Apps</h6>
+                <h6>WAGazine</h6>
+                <h6>Discussion Forum</h6>
+                <h6>Medical Fund</h6>
+            </div>
+        </div>
+        <div>
+            <p>
+                Copyright © KindMeal.my, 2014 - 2022. All rights reserved.
+                This website promotes compassionate, meat-free dining experience.
+                 Some food may contain eggs, dairy products or alcohol, please view individual listings for details.
+            </p>
+        </div>
+    </div>
+</body>
+</html>
