@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Directory</title>
+    <style>
+        #after-nav{
+            /* border: 1px solid red; */
+            width: 90%;
+            margin: auto;
+            height: 200px;
+        }
+        #after-nav > div{
+            /* border: 1px solid red; */
+            padding: 5px;
+            height: 60px;
+        }
+        #after-nav > div:nth-child(1){
+            /* border: 1px solid blue; */
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            
+        }
+        #after-nav > div:nth-child(1) h1,span,h3{
+            padding: 10px;
+        }
+        #after-nav > div:nth-child(4){
+            display:flex;
+            justify-content: space-between;
+            /* justify-content: center; */
+            align-items: center;
+            /* border: 1px solid red; */
+        }
+        #after-nav > div:nth-child(4) input{
+            width: 370px;
+            height: 30px;
+        }
+        #after-nav > div:nth-child(4) select{
+            width: 180px;
+            height: 40px;
+        }
+        #after-nav > div:nth-child(4) button{
+            width: 180px;
+            height: 40px;
+        }
+        #nav-colour{
+            background-color: #ECEFF1;
+            height: 320px;
+        }
+        .red{
+            background-color: red;
+            color: white;
+            border: 0px solid;
+            height: 35px;
+            width: 60px;
+            border-radius: 5px;
+            margin: 15px;
+        }
+        .green{
+            background-color: green;
+            color: white;
+            border: 0px solid;
+            height: 35px;
+            border-radius: 5px;
+        }
+        #button{
+            width: 85%;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            grid-template-rows: repeat(2,38px);
+            gap: 30px;
+            /* border: 1px solid red; */
+            height: 90px;
+            margin-top: 30px;
+        }
+        .page-no{
+            width: 85%;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0px 15px;
+            height:30px;
+            margin-top: 30px;
+            margin-bottom: 30px;
+            margin-left: 70px;
+            margin-right: 60px;
+            /* border: 1px solid blue; */
+        }
+        #mid{
+            display: grid;
+            grid-template-columns: repeat(2,47%);
+            gap: 20px;
+            width: 90%;
+            margin: auto;
+        }
+        .box{
+            /* border: 1px solid red; */
+            margin: 15px;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            border-radius: 10px;
+
+        }
+        #mid > .box > div:nth-child(1){
+            /* border: 1px solid red; */
+            padding: 10px;
+        }
+        #mid > .box > div:nth-child(3){
+            /* border: 1px solid blue; */
+            padding: 10px;
+        }
+        #mid > .box > div:nth-child(4){
+            /* border: 1px solid black; */
+            text-align: center;
+        }
+        .map iframe{
+            width: 90%;
+            display: block;
+            margin: auto;
+            height:200px ;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="nav-colour">
+        <div id="after-nav">
+            <div>
+                <h1>Vegetarian Restaurants In Maharajganj</h1>
+            </div>
+            <div>
+                <p>
+                    Looking for even more delicious choices? Explore hundreds of vegetarian and vegan restaurants in Maharajganj.
+                </p>
+            </div>
+            <div>
+                <p>
+                    Are you a restaurant or cafe owner? Boost your business with an attractive KindMeal
+                     profile and deals for FREE. <a href="#">Find out more</a> or <a href="#">contact us</a> now.
+                </p>
+            </div>
+            <div>
+               <div> <input type="text" placeholder="Search Recipe or User Name"></div>
+                <div>
+                    <select>
+                        <option value="">All Shops in Maharajganj</option>
+                        <option value="Maa Vasno Restro">Maa Vasno Restro</option>
+                        <option value="Krishna fast food">Krishna fast food</option>
+                        <option value="kanhaiya Shop">kanhaiya Shop</option>
+                        <option value="Shubham Restro">Shubham Restro</option>
+                        <option value="Bakery Restaurants">Bakery Restaurants</option>
+                    </select>
+                </div>
+                <div><button class="red">Search Shops</button></div>
+                <div></div>
+                <div><button class="green">Add a Shop</button></div>
+            </div>
+        </div>
+    </div>
+    <div id="button">
+        <button class="green">Vegeterian Directory</button>
+        <button>featured Restaurants</button>
+        <button>Food Menu</button>
+        <button>Food Map</button>
+    </div>
+    <div class="page-no">
+        <div>
+            <span>Page:</span>
+            <button>1</button>
+            <a href="#">2</a>
+            <a href="#">3</a>
+            <a href="#">4</a>
+            <a href="#">5</a>
+            <a href="#">6</a>
+            <a href="#">7</a>
+            <a href="#">8</a>
+            <a href="#">9</a>
+            <a href="#">10</a>
+        </div>
+        <div><button>Next >></button></div>
+    </div>
+   <div id="mid">
+    <div class="box">
+        <div>
+            <h3>Annalakshmi Vegetarian Restaurant</h3>
+            <p>
+                Ador is abbreviated from the word “Adorable” meaning “to love”. We founded Ador to inspire more people of all races and religions to go meatless because we strive hard to nurture our Mothe… <a href="#">show more</a></p>
+        </div>
+        <hr>
+        <div>
+            <p>Address</p>
+            <p>LG1.07, KL Gateway Mall, 2, Jalan Kerinchi, Gerbang Kerinchi Lestari, , 273207 Kuala Lumpur, Maharajganj</p>
+            <p>Contact No:- 7309731400</p>
+            <p>Opening Hours</p>
+            <p>Mon - Fri: 7.30am - 10pm; Sat - Sun & PH: 10am - 10pm</p>
+            <div class="map"><iframe src="https://www.google.com/maps/d/embed?mid=1B1lAsUpYFg82Je7XN1_cxRPf1UU&hl=en_US&ehbc=2E312F" width="640" height="480"></iframe></div>
+    </div>
+        <div>
+            <a href="#">Visit Website</a><span>|</span><a href="#">Get Direction</a><span>|</span><a href="#">Near by Shop</a>
+        </div>
+    </div>
+    <div class="box">
+        <div>
+            <h3>Annalakshmi Vegetarian Restaurant</h3>
+            <p>
+                Ador is abbreviated from the word “Adorable” meaning “to love”. We founded Ador to inspire more people of all races and religions to go meatless because we strive hard to nurture our Mothe… <a href="#">show more</a></p>
+        </div>
+        <hr>
+        <div>
+            <p>Address</p>
+            <p>LG1.07, KL Gateway Mall, 2, Jalan Kerinchi, Gerbang Kerinchi Lestari, , 273207 Kuala Lumpur, Maharajganj</p>
+            <p>Contact No:- 7309731400</p>
+            <p>Opening Hours</p>
+            <p>Mon - Fri: 7.30am - 10pm; Sat - Sun & PH: 10am - 10pm</p>
+            <div class="map"><iframe src="https://www.google.com/maps/d/embed?mid=1B1lAsUpYFg82Je7XN1_cxRPf1UU&hl=en_US&ehbc=2E312F" width="640" height="480"></iframe></div>
+        </div> 
+        <div>
+            <a href="#">Visit Website</a><span>|</span><a href="#">Get Direction</a><span>|</span><a href="#">Near by Shop</a>
+        </div>
+    </div>
+    <div class="box">
+        <div>
+            <h3>Annalakshmi Vegetarian Restaurant</h3>
+            <p>
+                Ador is abbreviated from the word “Adorable” meaning “to love”. We founded Ador to inspire more people of all races and religions to go meatless because we strive hard to nurture our Mothe… <a href="#">show more</a></p>
+        </div>
+        <hr>
+        <div>
+            <p>Address</p>
+            <p>LG1.07, KL Gateway Mall, 2, Jalan Kerinchi, Gerbang Kerinchi Lestari, , 273207 Kuala Lumpur, Maharajganj</p>
+            <p>Contact No:- 7309731400</p>
+            <p>Opening Hours</p>
+            <p>Mon - Fri: 7.30am - 10pm; Sat - Sun & PH: 10am - 10pm</p>
+            <div class="map"><iframe src="https://www.google.com/maps/d/embed?mid=1B1lAsUpYFg82Je7XN1_cxRPf1UU&hl=en_US&ehbc=2E312F" width="640" height="480"></iframe></div>
+        </div> 
+        <div>
+            <a href="#">Visit Website</a><span>|</span><a href="#">Get Direction</a><span>|</span><a href="#">Near by Shop</a>
+        </div>
+    </div>
+    <div class="box">
+        <div>
+            <h3>Annalakshmi Vegetarian Restaurant</h3>
+            <p>
+                Ador is abbreviated from the word “Adorable” meaning “to love”. We founded Ador to inspire more people of all races and religions to go meatless because we strive hard to nurture our Mothe… <a href="#">show more</a></p>
+        </div>
+        <hr>
+        <div>
+            <p>Address</p>
+            <p>LG1.07, KL Gateway Mall, 2, Jalan Kerinchi, Gerbang Kerinchi Lestari, , 273207 Kuala Lumpur, Maharajganj</p>
+            <p>Contact No:- 7309731400</p>
+            <p>Opening Hours</p>
+            <p>Mon - Fri: 7.30am - 10pm; Sat - Sun & PH: 10am - 10pm</p>
+            <div class="map"><iframe src="https://www.google.com/maps/d/embed?mid=1B1lAsUpYFg82Je7XN1_cxRPf1UU&hl=en_US&ehbc=2E312F" width="640" height="480"></iframe></div>
+        </div> 
+        <div>
+            <a href="#">Visit Website</a><span>|</span><a href="#">Get Direction</a><span>|</span><a href="#">Near by Shop</a>
+        </div>
+    </div>
+    <div class="box">
+        <div>
+            <h3>Annalakshmi Vegetarian Restaurant</h3>
+            <p>
+                Ador is abbreviated from the word “Adorable” meaning “to love”. We founded Ador to inspire more people of all races and religions to go meatless because we strive hard to nurture our Mothe… <a href="#">show more</a></p>
+        </div>
+        <hr>
+        <div>
+            <p>Address</p>
+            <p>LG1.07, KL Gateway Mall, 2, Jalan Kerinchi, Gerbang Kerinchi Lestari, , 273207 Kuala Lumpur, Maharajganj</p>
+            <p>Contact No:- 7309731400</p>
+            <p>Opening Hours</p>
+            <p>Mon - Fri: 7.30am - 10pm; Sat - Sun & PH: 10am - 10pm</p>
+            <div class="map"><iframe src="https://www.google.com/maps/d/embed?mid=1B1lAsUpYFg82Je7XN1_cxRPf1UU&hl=en_US&ehbc=2E312F" width="640" height="480"></iframe></div>
+        </div> 
+        <div>
+            <a href="#">Visit Website</a><span>|</span><a href="#">Get Direction</a><span>|</span><a href="#">Near by Shop</a>
+        </div>
+    </div>
+    <div class="box">
+        <div>
+            <h3>Annalakshmi Vegetarian Restaurant</h3>
+            <p>
+                Ador is abbreviated from the word “Adorable” meaning “to love”. We founded Ador to inspire more people of all races and religions to go meatless because we strive hard to nurture our Mothe… <a href="#">show more</a></p>
+        </div>
+        <hr>
+        <div>
+            <p>Address</p>
+            <p>LG1.07, KL Gateway Mall, 2, Jalan Kerinchi, Gerbang Kerinchi Lestari, , 273207 Kuala Lumpur, Maharajganj</p>
+            <p>Contact No:- 7309731400</p>
+            <p>Opening Hours</p>
+            <p>Mon - Fri: 7.30am - 10pm; Sat - Sun & PH: 10am - 10pm</p>
+            <div class="map"><iframe src="https://www.google.com/maps/d/embed?mid=1B1lAsUpYFg82Je7XN1_cxRPf1UU&hl=en_US&ehbc=2E312F" width="640" height="480"></iframe></div>
+        </div> 
+        <div>
+            <a href="#">Visit Website</a><span>|</span><a href="#">Get Direction</a><span>|</span><a href="#">Near by Shop</a>
+        </div>
+    </div>
+    <div class="box">
+        <div>
+            <h3>Annalakshmi Vegetarian Restaurant</h3>
+            <p>
+                Ador is abbreviated from the word “Adorable” meaning “to love”. We founded Ador to inspire more people of all races and religions to go meatless because we strive hard to nurture our Mothe… <a href="#">show more</a></p>
+        </div>
+        <hr>
+        <div>
+            <p>Address</p>
+            <p>LG1.07, KL Gateway Mall, 2, Jalan Kerinchi, Gerbang Kerinchi Lestari, , 273207 Kuala Lumpur, Maharajganj</p>
+            <p>Contact No:- 7309731400</p>
+            <p>Opening Hours</p>
+            <p>Mon - Fri: 7.30am - 10pm; Sat - Sun & PH: 10am - 10pm</p>
+            <div class="map"><iframe src="https://www.google.com/maps/d/embed?mid=1B1lAsUpYFg82Je7XN1_cxRPf1UU&hl=en_US&ehbc=2E312F" width="640" height="480"></iframe></div>
+        </div> 
+        <div>
+            <a href="#">Visit Website</a><span>|</span><a href="#">Get Direction</a><span>|</span><a href="#">Near by Shop</a>
+        </div>
+    </div>
+    <div class="box">
+        <div>
+            <h3>Annalakshmi Vegetarian Restaurant</h3>
+            <p>
+                Ador is abbreviated from the word “Adorable” meaning “to love”. We founded Ador to inspire more people of all races and religions to go meatless because we strive hard to nurture our Mothe… <a href="#">show more</a></p>
+        </div>
+        <hr>
+        <div>
+            <p>Address</p>
+            <p>LG1.07, KL Gateway Mall, 2, Jalan Kerinchi, Gerbang Kerinchi Lestari, , 273207 Kuala Lumpur, Maharajganj</p>
+            <p>Contact No:- 7309731400</p>
+            <p>Opening Hours</p>
+            <p>Mon - Fri: 7.30am - 10pm; Sat - Sun & PH: 10am - 10pm</p>
+            <div class="map"><iframe src="https://www.google.com/maps/d/embed?mid=1B1lAsUpYFg82Je7XN1_cxRPf1UU&hl=en_US&ehbc=2E312F" width="640" height="480"></iframe></div>
+        </div> 
+        <div>
+            <a href="#">Visit Website</a><span>|</span><a href="#">Get Direction</a><span>|</span><a href="#">Near by Shop</a>
+        </div>
+    </div>
+   </div>
+    <div class="page-no">
+        <div>
+            <span>Page:</span>
+            <button>1</button>
+            <a href="#">2</a>
+            <a href="#">3</a>
+            <a href="#">4</a>
+            <a href="#">5</a>
+            <a href="#">6</a>
+            <a href="#">7</a>
+            <a href="#">8</a>
+            <a href="#">9</a>
+            <a href="#">10</a>
+        </div>
+        <div><button>Next >></button></div>
+    </div>
+</body>
+</html>
