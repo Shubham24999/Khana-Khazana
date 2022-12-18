@@ -5,82 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Khana Khajana</title>
+    <link rel="stylesheet" href="/header.css" type="text/css">
+    <link rel="stylesheet" href="/footer.css" type="text/css">
     <style>
         *{
             padding: 0px;
             margin: 0px;
             box-sizing: border-box;
-        }
-        #container{
-            width: 90%;
-            margin: auto;
-        }
-        #header{
-            display: grid;
-            /* grid-template-columns: 350px 300px 250px; */
-            height: 140px;
-            grid-template-columns:35% 25% 20%;
-            gap: 90px;
-            /* border: 1px solid red; */
-        }
-        #header img{
-            width: 60%;
-            
-        }
-        #header div{
-            /* border: 1px solid blue; */
-            height: 120px;
-        }
-        #header div img:hover{
-            cursor: pointer;
-        }
-        #header div:nth-child(1){
-            margin-left: 20px;
-            margin-top: 5px;
-            margin-bottom: 10px;
-        }
-        #header div:nth-child(1) img{
-            height: 90px;
-            width: 100%;
-            height: 130px;
-        }
-        #header div:nth-child(2){
-            display: flex;
-            align-items: center;
-            margin: 10px 0px;
-            /* border:1px solid black; */
-        }
-        #header div:nth-child(2) img{
-            /* border: 1px solid green; */
-            margin: 5px;
-            width: 30%;
-            height: 70px;
-            border-radius: 50%;
-            
-        }
-        #header div:nth-child(3){
-            /* border: 1px solid blue; */
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            justify-content: space-around;
-            margin: 10px 0px 10px 0px;
-        }
-        #header div:nth-child(3) button:hover{
-            cursor: pointer;
-        }
-        #nav{
-            display: flex;
-            background-color: #2bb673;
-            height: 40px;
-            justify-content: space-around;
-            align-items: center;
-        }
-        #nav a{
-            color: white;
-            /* font-weight:normal; */
-            font-family: 'Roboto', Arial, Helvetica, sans-serif;
-            text-decoration:none ;
         }
         #content-box{
             width: 90%;
@@ -233,37 +164,7 @@
             height: 250px;
             padding: 10px 10px 0px 10px;
         }
-        #footer{
-            background-color: #2bb673;
-            height: 300px;
-            margin-top: 0px;
-            color: white;
-        }
-        #footer h5,h6:hover{
-            padding: 5px;
-            cursor: pointer;
-        }
-        /* #footer > div{
-            border: 1px solid red;
-        } */
-        /* #footer > div > div{
-            border: 1px solid red;
-
-        } */
-        #footer > div:nth-child(1){
-            display: grid;
-            grid-template-columns: repeat(5,1fr);
-            width: 90%;
-            gap: 30px;
-            margin: auto;
-            height: 200px;
-        }
-        #footer > div:nth-child(2){
-            width: 80%;
-            text-align: center;
-            margin: auto;
-            margin-top: 20px;
-        }
+        
     </style>
 </head>
 <body>
@@ -276,20 +177,20 @@
                 <img src="https://www.kindmeal.my/images/follow_twitter_grey.png" alt="error">
             </div>
             <div>
-                <button>Login</button>
-                <button>Sign up</button>
+                <a href="/login/login.html"><button id="login">Login</button></a>
+                <button id="Signup">Sign up</button>
             </div>
         </div>
     </div>    
     <div id="nav">
-            <div><a href="#">Home</a></div>
-            <div><a href="#">Meals Deals</a></div>
-            <div><a href="#">KindMoments</a></div>
-            <div><a href="#">Recipes</a></div>
-            <div><a href="#">Directory</a></div>
-            <div><a href="#">Articles</a></div>
-            <div><a href="#">Mobile App</a></div>
-            <div><a href="#">Help</a></div>
+            <div><a href="/Day-2/index.html">Home</a></div>
+            <div><a href="/Day-3/MealDeals.html">Meals Deals</a></div>
+            <div><a href="/Day-3/KindMoments.html">KindMoments</a></div>
+            <div><a href="/Day-4/Recipes.html">Recipes</a></div>
+            <div><a href="/Day-4/Directory.html">Directory</a></div>
+            <div><a href="/Day-5/Article.html">Articles</a></div>
+            <div><a href="/Day-5/Mobile_App.html">Mobile App</a></div>
+            <div><a href="/Day-5/Help.html">Help</a></div>
     </div>
     <div id="content-box">
         <div>
@@ -575,4 +476,6 @@
         </div>
     </div>
 </body>
+<script>
+</script>
 </html>
