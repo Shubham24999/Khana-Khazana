@@ -4,52 +4,51 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KindMoments</title>
+    <title>Recipes</title>
     <link rel="stylesheet" href="/CSS/header.css" type="text/css">
     <link rel="stylesheet" href="/CSS/footer.css" type="text/css">
     <style>
-        #middle-box{
+        .middle-box{
             /* border: 1px solid black; */
             display: grid;
             grid-template-columns: repeat(3,350px);
             width: 90%;
             margin: auto;
-            gap: 72px;
+            gap: 60px;
+            margin-top: 30px;
+            margin-bottom: 30px;
         }
-        #middle-box .box{
+        .middle-box .box{
             box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            border-radius: 10px;
         }
-        #middle-box >.box > div:nth-child(3) {
+        .middle-box >.box > div:nth-child(3) {
             /* border: 1px solid red; */
             display: flex;
             justify-content: center;
             height: 30px;
             
         }
-        #middle-box > .box > div:nth-child(3) img{
+        .middle-box > .box > div:nth-child(3) img{
             width: 22px;
             height: 22px;
             padding: 5px;
         }
-        #middle-box > .box > div:nth-child(1){
+        .middle-box > .box > div:nth-child(1){
             display: flex;
             justify-content: space-between;
             align-items: center;
             margin: 10px;
             /* border: 1px solid red; */
         }
-        #middle-box > .box > div:nth-child(1) img{
+        .middle-box > .box > div:nth-child(1) img{
             width: 50px;
             height: 50px;
             border-radius: 50%;
         }
-        #middle-box > .box > div:nth-child(2) img{
+        .middle-box > .box > div:nth-child(2) img{
             width: 100%;
             height: 280px;
-        }
-        #middle-box >.box > div:nth-child(4){
-            /* border: 1px solid red; */
-            margin-left: 10px;
         }
         .page-no{
             width: 85%;
@@ -64,15 +63,6 @@
             margin-left: 70px;
             margin-right: 60px;
             /* border: 1px solid blue; */
-        }
-        .red-2{
-            background-color: red;
-            color: white;
-            border: 0px solid;
-            height: 35px;
-            width: 120px;
-            border-radius: 5px;
-            margin: 15px;
         }
         .red{
             background-color: red;
@@ -90,17 +80,24 @@
             height: 35px;
             border-radius: 5px;
         }
-        .btn:hover{
-            cursor: pointer;
-        } 
+        #mid-img{
+            width: 85%;
+            margin: auto;
+            /* border: 1px solid red; */
+        }
+        #mid-img img{
+            width: 100%;
+        }
         #after-nav{
             /* border: 1px solid red; */
             width: 90%;
             margin: auto;
+            height: 200px;
         }
         #after-nav > div{
             /* border: 1px solid red; */
             padding: 5px;
+            height: 60px;
         }
         #after-nav > div:nth-child(1){
             /* border: 1px solid blue; */
@@ -112,41 +109,40 @@
         #after-nav > div:nth-child(1) h1,span,h3{
             padding: 10px;
         }
-        #boxes{
-            display: flex;
+        #after-nav > div:nth-child(4){
+            display:flex;
+            justify-content: space-between;
+            /* justify-content: center; */
+            align-items: center;
+            /* border: 1px solid red; */
+        }
+        #after-nav > div:nth-child(4) input{
+            width: 370px;
+            height: 30px;
+        }
+        #after-nav > div:nth-child(4) select{
+            width: 150px;
+            height: 40px;
+        }
+        #after-nav > div:nth-child(4) button{
+            width: 180px;
+            height: 40px;
+        }
+        #nav-colour{
             background-color: #ECEFF1;
-            align-items: flex-end;
+            height: 320px;
         }
-        #boxes > div:nth-child(1){
-            /* border: 1px solid red; */
-            width: 70%;
-        }
-        #boxes > div:nth-child(2){
-            /* border: 1px solid red; */
-            width: 18%;
-            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-            background-color: white;
-            height: 30%;
-            margin-bottom: 30px;
-            margin-left: 30px;
-            padding: 20px;
-            text-align: center;
-        }
-        #buttons{
-            /* border: 1px solid red; */
-            /* display: flex; */
-            /* justify-content: space-between; */
+        #button{
             width: 90%;
             margin: auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            /* padding: 20px; */
+            display: grid;
+            grid-template-columns: repeat(5,1fr);
+            grid-template-rows: repeat(2,38px);
+            gap: 10px;
+            /* border: 1px solid red; */
+            height: 90px;
+            margin-top: 30px;
         }
-        /* #buttons > div{
-            border:1px solid blue;
-        } */
-
     </style>
 </head>
 <body>
@@ -160,7 +156,7 @@
             </div>
             <div>
                 <a href="/login/login.html"><button id="login">Login</button></a>
-                <a href="/Signip/Signup.html"><button id="login">Login</button></a>
+                <button id="Signup">Sign up</button>
             </div>
         </div>
     </div>    
@@ -174,60 +170,62 @@
         <div><a href="/Day-5/Mobile_App.html">Mobile App</a></div>
         <div><a href="/Day-5/Help.html">Help</a></div>
     </div>
-    <div id="boxes">
-        <div id="nav-colour">
-            <div id="after-nav">
+    <div id="nav-colour">
+        <div id="after-nav">
+            <div>
+                <h1>Food & Drinks</h1>
+                <span>|</span>
+                <h3>Yummy Meat-Free Recipes</h3>
+            </div>
+            <div>
+                <p>
+                    Want to craft your own creative meat-free meals? Get inspiration from other food lovers, or share your own masterpieces!
+                </p>
+            </div>
+            <div>
+                <p>
+                    Transform into a master chef now.
+                </p>
+            </div>
+            <div>
+               <div> <input type="text" placeholder="Search Recipe or User Name"></div>
                 <div>
-                    <h1>KindMoments</h1>
-                    <span>|</span>
-                    <h3> Saving Lives with Yummy Photos</h3>
+                    <select>
+                        <option value="">All Catergory</option>
+                        <option value="Pasta">Pasta</option>
+                        <option value="Burger">Burger</option>
+                        <option value="Breakfast">Breakfast</option>
+                        <option value="Salad">Salad</option>
+                        <option value="Bakery">Bakery</option>
+                        <option value="Tea and Desert">Tea and Desert</option>
+                        <option value="Indian">Indian</option>
+                        <option value="Soup">Soup</option>
+                        <option value="Maggi">Maggi</option>
+                        <option value="Pizza">Pizza</option>
+                    </select>
                 </div>
-                <div>
-                    <p>
-                        Browse delicious meat-free, vegetarian deals from top restaurants and cafes! 
-                        Just click on "Get Free Coupon" to obtain instant discounts and dine at the restaurants. 
-                        No upfront payment, booking or printing is needed. If you share it on social media,
-                         you'll even DOUBLE your discount!
-                    </p>
-                </div>
-                <div>
-                    <p>
-                        Download our <a href="#">mobile app</a> to easily showcase your masterpieces and interact with food lovers.
-                    </p>
-                    <p>Get started sharing your tasty moments now.</p>
-                </div>
+                <div><button class="red">Search Recipes</button></div>
+                <div></div>
+                <div><button class="green">Share My Recipes</button></div>
             </div>
         </div>
-        <div>
-           <h3>Share Your KindMoment</h3>
-           <p>Interesting food or restaurant? Share with 1000s of food lovers!</p>
-           <button class="red-2 btn">Share</button></div>
-        </div>       
     </div>
-    <div id="buttons">
-            <div><button class="green btn">Browser Restaurant</button></div>
-            <div><button class="btn">Deal Reviews</button></div>
-            <div><button class="btn">Following</button></div>
-            <div><input type="text" placeholder="Search User or Shop"></div>
-           <div>
-            <select>
-                <option value="">All Locations</option>
-                <option value="Maharajganj">Maharajganj</option>
-                <option value="Semara">Semara</option>
-                <option value="Mithaura">Mithaura</option>
-                <option value="Sindouriya">Sindouriya</option>
-                <option value="harkhoda">harkhoda</option>
-                <option value="Siddhartha Nagar">Siddhartha Nagar</option>
-                <option value="BirdPur">BirdPur</option>
-                <option value="SundarPur">SundarPur</option>
-            </select>
-           </div>
-           <div> <button class="red-2 btn">Search</button></div>
+    <div id="button">
+        <button class="green">All Catergory</button>
+        <button>Pasta</button>
+        <button>Burger</button>
+        <button>Breakfast</button>
+        <button>Salad</button>
+        <button>Bakery</button>
+        <button>Tea and Desert</button>
+        <button>Indian</button>
+        <button>Soup</button>
+        <button>Pizza</button>
     </div>
     <div class="page-no">
         <div>
             <span>Page:</span>
-            <button class="btn">1</button>
+            <button>1</button>
             <a href="#">2</a>
             <a href="#">3</a>
             <a href="#">4</a>
@@ -236,232 +234,198 @@
             <a href="#">7</a>
             <a href="#">8</a>
             <a href="#">9</a>
-            <a href="#">10</a>
         </div>
-        <div><button class="btn">Next >></button></div>
+        <div><button>Next >></button></div>
     </div>
-    <div id="middle-box">
+    <div class="middle-box">
         <div class="box">
             <div>
-                <img src="https://www.kindmeal.my/photos/member/23/23028-s.jpg" alt="error">
+                <img src="https://www.kindmeal.my/photos/member/40/40177-s.jpg" alt="error">
                 <div>
-                    <a href="#">YinYinBoey</a>
-                    <p>Dec 15th 2022</p>
+                    <a href="#">MyWeekendPlan</a>
                 </div>
-                <button class="red btn">View</button>
+                <button class="red">View</button>
             </div>
-            <div><img src="https://www.kindmeal.my/photos/moment/24/24746-48137-m.jpg" alt=""></div>
+            <div><img src="https://www.kindmeal.my/photos/recipe/1039/1039475-58908-m.jpg" alt=""></div>
             <div>
+                <img src="https://www.kindmeal.my/images/icon_time_small.png" alt="">
                 <img src="https://www.kindmeal.my/images/icon_heart_darkgrey.svg" alt="">
                 <img src="https://www.kindmeal.my/images/icon_comment_darkgrey.png" alt="">
-            </div>
-            <div>
-                <p>Hmmm…had trouble sleeping last night so a bit tired today bu.. <a href="#">see more</a></p>
             </div>
         </div>
         <div class="box">
             <div>
-                <img src="https://www.kindmeal.my/photos/member/23/23028-s.jpg" alt="error">
+                <img src="https://www.kindmeal.my/photos/member/40/40177-s.jpg" alt="error">
                 <div>
-                    <a href="#">YinYinBoey</a>
-                    <p>Dec 15th 2022</p>
+                    <a href="#">MyWeekendPlan</a>
                 </div>
-                <button class="red btn">View</button>
+                <button class="red">View</button>
             </div>
-            <div><img src="https://www.kindmeal.my/photos/moment/24/24746-48137-m.jpg" alt=""></div>
+            <div><img src="https://www.kindmeal.my/photos/recipe/1039/1039475-58908-m.jpg" alt=""></div>
             <div>
+                <img src="https://www.kindmeal.my/images/icon_time_small.png" alt="">
                 <img src="https://www.kindmeal.my/images/icon_heart_darkgrey.svg" alt="">
                 <img src="https://www.kindmeal.my/images/icon_comment_darkgrey.png" alt="">
-            </div>
-            <div>
-                <p>Hmmm…had trouble sleeping last night so a bit tired today bu.. <a href="#">see more</a></p>
             </div>
         </div>
         <div class="box">
             <div>
-                <img src="https://www.kindmeal.my/photos/member/23/23028-s.jpg" alt="error">
+                <img src="https://www.kindmeal.my/photos/member/40/40177-s.jpg" alt="error">
                 <div>
-                    <a href="#">YinYinBoey</a>
-                    <p>Dec 15th 2022</p>
+                    <a href="#">MyWeekendPlan</a>
                 </div>
-                <button class="red btn">View</button>
+                <button class="red">View</button>
             </div>
-            <div><img src="https://www.kindmeal.my/photos/moment/24/24746-48137-m.jpg" alt=""></div>
+            <div><img src="https://www.kindmeal.my/photos/recipe/1039/1039475-58908-m.jpg" alt=""></div>
             <div>
+                <img src="https://www.kindmeal.my/images/icon_time_small.png" alt="">
                 <img src="https://www.kindmeal.my/images/icon_heart_darkgrey.svg" alt="">
                 <img src="https://www.kindmeal.my/images/icon_comment_darkgrey.png" alt="">
-            </div>
-            <div>
-                <p>Hmmm…had trouble sleeping last night so a bit tired today bu.. <a href="#">see more</a></p>
             </div>
         </div>
         <div class="box">
             <div>
-                <img src="https://www.kindmeal.my/photos/member/23/23028-s.jpg" alt="error">
+                <img src="https://www.kindmeal.my/photos/member/40/40177-s.jpg" alt="error">
                 <div>
-                    <a href="#">YinYinBoey</a>
-                    <p>Dec 15th 2022</p>
+                    <a href="#">MyWeekendPlan</a>
                 </div>
-                <button class="red btn">View</button>
+                <button class="red">View</button>
             </div>
-            <div><img src="https://www.kindmeal.my/photos/moment/24/24746-48137-m.jpg" alt=""></div>
+            <div><img src="https://www.kindmeal.my/photos/recipe/1039/1039467-58898-m.jpg" alt=""></div>
             <div>
+                <img src="https://www.kindmeal.my/images/icon_time_small.png" alt="">
                 <img src="https://www.kindmeal.my/images/icon_heart_darkgrey.svg" alt="">
                 <img src="https://www.kindmeal.my/images/icon_comment_darkgrey.png" alt="">
-            </div>
-            <div>
-                <p>Hmmm…had trouble sleeping last night so a bit tired today bu.. <a href="#">see more</a></p>
             </div>
         </div>
         <div class="box">
             <div>
-                <img src="https://www.kindmeal.my/photos/member/23/23028-s.jpg" alt="error">
+                <img src="https://www.kindmeal.my/photos/member/40/40177-s.jpg" alt="error">
                 <div>
-                    <a href="#">YinYinBoey</a>
-                    <p>Dec 15th 2022</p>
+                    <a href="#">MyWeekendPlan</a>
                 </div>
-                <button class="red btn">View</button>
+                <button class="red">View</button>
             </div>
-            <div><img src="https://www.kindmeal.my/photos/moment/24/24746-48137-m.jpg" alt=""></div>
+            <div><img src="https://www.kindmeal.my/photos/recipe/1039/1039467-58898-m.jpg" alt=""></div>
             <div>
+                <img src="https://www.kindmeal.my/images/icon_time_small.png" alt="">
                 <img src="https://www.kindmeal.my/images/icon_heart_darkgrey.svg" alt="">
                 <img src="https://www.kindmeal.my/images/icon_comment_darkgrey.png" alt="">
-            </div>
-            <div>
-                <p>Hmmm…had trouble sleeping last night so a bit tired today bu.. <a href="#">see more</a></p>
             </div>
         </div>
         <div class="box">
             <div>
-                <img src="https://www.kindmeal.my/photos/member/23/23028-s.jpg" alt="error">
+                <img src="https://www.kindmeal.my/photos/member/40/40177-s.jpg" alt="error">
                 <div>
-                    <a href="#">YinYinBoey</a>
-                    <p>Dec 15th 2022</p>
+                    <a href="#">MyWeekendPlan</a>
                 </div>
-                <button class="red btn">View</button>
+                <button class="red">View</button>
             </div>
-            <div><img src="https://www.kindmeal.my/photos/moment/24/24746-48137-m.jpg" alt=""></div>
+            <div><img src="https://www.kindmeal.my/photos/recipe/1039/1039467-58898-m.jpg" alt=""></div>
             <div>
+                <img src="https://www.kindmeal.my/images/icon_time_small.png" alt="">
                 <img src="https://www.kindmeal.my/images/icon_heart_darkgrey.svg" alt="">
                 <img src="https://www.kindmeal.my/images/icon_comment_darkgrey.png" alt="">
             </div>
+        </div>
+    </div>
+    <div id="mid-img"><img src="https://www.kindmeal.my/images/ads/banner_advertising-1100x280.png" alt=""></div>
+    <div class="middle-box">
+        <div class="box">
             <div>
-                <p>Hmmm…had trouble sleeping last night so a bit tired today bu.. <a href="#">see more</a></p>
+                <img src="https://www.kindmeal.my/photos/member/40/40177-s.jpg" alt="error">
+                <div>
+                    <a href="#">MyWeekendPlan</a>
+                </div>
+                <button class="red">View</button>
+            </div>
+            <div><img src="https://www.kindmeal.my/photos/recipe/1039/1039475-58908-m.jpg" alt=""></div>
+            <div>
+                <img src="https://www.kindmeal.my/images/icon_time_small.png" alt="">
+                <img src="https://www.kindmeal.my/images/icon_heart_darkgrey.svg" alt="">
+                <img src="https://www.kindmeal.my/images/icon_comment_darkgrey.png" alt="">
             </div>
         </div>
         <div class="box">
             <div>
-                <img src="https://www.kindmeal.my/photos/member/23/23028-s.jpg" alt="error">
+                <img src="https://www.kindmeal.my/photos/member/40/40177-s.jpg" alt="error">
                 <div>
-                    <a href="#">YinYinBoey</a>
-                    <p>Dec 15th 2022</p>
+                    <a href="#">MyWeekendPlan</a>
                 </div>
-                <button class="red btn">View</button>
+                <button class="red">View</button>
             </div>
-            <div><img src="https://www.kindmeal.my/photos/moment/24/24746-48137-m.jpg" alt=""></div>
+            <div><img src="https://www.kindmeal.my/photos/recipe/1039/1039475-58908-m.jpg" alt=""></div>
             <div>
+                <img src="https://www.kindmeal.my/images/icon_time_small.png" alt="">
                 <img src="https://www.kindmeal.my/images/icon_heart_darkgrey.svg" alt="">
                 <img src="https://www.kindmeal.my/images/icon_comment_darkgrey.png" alt="">
-            </div>
-            <div>
-                <p>Hmmm…had trouble sleeping last night so a bit tired today bu.. <a href="#">see more</a></p>
             </div>
         </div>
         <div class="box">
             <div>
-                <img src="https://www.kindmeal.my/photos/member/23/23028-s.jpg" alt="error">
+                <img src="https://www.kindmeal.my/photos/member/40/40177-s.jpg" alt="error">
                 <div>
-                    <a href="#">YinYinBoey</a>
-                    <p>Dec 15th 2022</p>
+                    <a href="#">MyWeekendPlan</a>
                 </div>
-                <button class="red btn">View</button>
+                <button class="red">View</button>
             </div>
-            <div><img src="https://www.kindmeal.my/photos/moment/24/24746-48137-m.jpg" alt=""></div>
+            <div><img src="https://www.kindmeal.my/photos/recipe/1039/1039475-58908-m.jpg" alt=""></div>
             <div>
+                <img src="https://www.kindmeal.my/images/icon_time_small.png" alt="">
                 <img src="https://www.kindmeal.my/images/icon_heart_darkgrey.svg" alt="">
                 <img src="https://www.kindmeal.my/images/icon_comment_darkgrey.png" alt="">
-            </div>
-            <div>
-                <p>Hmmm…had trouble sleeping last night so a bit tired today bu.. <a href="#">see more</a></p>
             </div>
         </div>
         <div class="box">
             <div>
-                <img src="https://www.kindmeal.my/photos/member/23/23028-s.jpg" alt="error">
+                <img src="https://www.kindmeal.my/photos/member/40/40177-s.jpg" alt="error">
                 <div>
-                    <a href="#">YinYinBoey</a>
-                    <p>Dec 15th 2022</p>
+                    <a href="#">MyWeekendPlan</a>
                 </div>
-                <button class="red btn">View</button>
+                <button class="red">View</button>
             </div>
-            <div><img src="https://www.kindmeal.my/photos/moment/24/24746-48137-m.jpg" alt=""></div>
+            <div><img src="https://www.kindmeal.my/photos/recipe/1039/1039467-58898-m.jpg" alt=""></div>
             <div>
+                <img src="https://www.kindmeal.my/images/icon_time_small.png" alt="">
                 <img src="https://www.kindmeal.my/images/icon_heart_darkgrey.svg" alt="">
                 <img src="https://www.kindmeal.my/images/icon_comment_darkgrey.png" alt="">
-            </div>
-            <div>
-                <p>Hmmm…had trouble sleeping last night so a bit tired today bu.. <a href="#">see more</a></p>
             </div>
         </div>
         <div class="box">
             <div>
-                <img src="https://www.kindmeal.my/photos/member/23/23028-s.jpg" alt="error">
+                <img src="https://www.kindmeal.my/photos/member/40/40177-s.jpg" alt="error">
                 <div>
-                    <a href="#">YinYinBoey</a>
-                    <p>Dec 15th 2022</p>
+                    <a href="#">MyWeekendPlan</a>
                 </div>
-                <button class="red btn">View</button>
+                <button class="red">View</button>
             </div>
-            <div><img src="https://www.kindmeal.my/photos/moment/24/24746-48137-m.jpg" alt=""></div>
+            <div><img src="https://www.kindmeal.my/photos/recipe/1039/1039467-58898-m.jpg" alt=""></div>
             <div>
+                <img src="https://www.kindmeal.my/images/icon_time_small.png" alt="">
                 <img src="https://www.kindmeal.my/images/icon_heart_darkgrey.svg" alt="">
                 <img src="https://www.kindmeal.my/images/icon_comment_darkgrey.png" alt="">
-            </div>
-            <div>
-                <p>Hmmm…had trouble sleeping last night so a bit tired today bu.. <a href="#">see more</a></p>
             </div>
         </div>
         <div class="box">
             <div>
-                <img src="https://www.kindmeal.my/photos/member/23/23028-s.jpg" alt="error">
+                <img src="https://www.kindmeal.my/photos/member/40/40177-s.jpg" alt="error">
                 <div>
-                    <a href="#">YinYinBoey</a>
-                    <p>Dec 15th 2022</p>
+                    <a href="#">MyWeekendPlan</a>
                 </div>
-                <button class="red btn">View</button>
+                <button class="red">View</button>
             </div>
-            <div><img src="https://www.kindmeal.my/photos/moment/24/24746-48137-m.jpg" alt=""></div>
+            <div><img src="https://www.kindmeal.my/photos/recipe/1039/1039467-58898-m.jpg" alt=""></div>
             <div>
+                <img src="https://www.kindmeal.my/images/icon_time_small.png" alt="">
                 <img src="https://www.kindmeal.my/images/icon_heart_darkgrey.svg" alt="">
                 <img src="https://www.kindmeal.my/images/icon_comment_darkgrey.png" alt="">
-            </div>
-            <div>
-                <p>Hmmm…had trouble sleeping last night so a bit tired today bu.. <a href="#">see more</a></p>
-            </div>
-        </div>
-        <div class="box">
-            <div>
-                <img src="https://www.kindmeal.my/photos/member/23/23028-s.jpg" alt="error">
-                <div>
-                    <a href="#">YinYinBoey</a>
-                    <p>Dec 15th 2022</p>
-                </div>
-                <button class="red btn">View</button>
-            </div>
-            <div><img src="https://www.kindmeal.my/photos/moment/24/24746-48137-m.jpg" alt=""></div>
-            <div>
-                <img src="https://www.kindmeal.my/images/icon_heart_darkgrey.svg" alt="">
-                <img src="https://www.kindmeal.my/images/icon_comment_darkgrey.png" alt="">
-            </div>
-            <div>
-                <p>Hmmm…had trouble sleeping last night so a bit tired today bu.. <a href="#">see more</a></p>
             </div>
         </div>
     </div>
     <div class="page-no">
         <div>
             <span>Page:</span>
-            <button class="btn">1</button>
+            <button>1</button>
             <a href="#">2</a>
             <a href="#">3</a>
             <a href="#">4</a>
@@ -470,9 +434,8 @@
             <a href="#">7</a>
             <a href="#">8</a>
             <a href="#">9</a>
-            <a href="#">10</a>
         </div>
-        <div><button class="btn">Next >></button></div>
+        <div><button>Next >></button></div>
     </div>
     <div id="footer">
         <div>
@@ -548,6 +511,5 @@
             </p>
         </div>
     </div>
-
 </body>
 </html>
