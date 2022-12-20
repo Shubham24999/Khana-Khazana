@@ -1,10 +1,11 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Log In</title>
+    <title>Sign-up</title>
     <link rel="stylesheet" href="/CSS/header.css" type="text/css">
     <link rel="stylesheet" href="/CSS/footer.css" type="text/css">
     <style>
@@ -46,7 +47,7 @@
                 <img src="https://www.kindmeal.my/images/follow_facebook_grey.png" alt="error">
                 <img src="https://www.kindmeal.my/images/follow_twitter_grey.png" alt="error">
             </div>
-            <div><a href="/Signip/Signup.html"><button id="Signup">Sign up</button></a></div>
+            <div><a href="/Signip/Signup.html"><button id="Signup">Sign up</button></a></div>          
         </div>
     </div>    
     <div id="nav">
@@ -70,7 +71,7 @@
         <div>
             <input type="password" id="pass" placeholder="Enter Password">
         </div>
-        <div><button id="log-btn">log in</button></div>
+        <div><button id="log-in">log in</button></div>
     </div>
     <div id="footer">
         <div>
@@ -150,19 +151,26 @@
 <script>
     let number=document.getElementById("no");
     let pass=document.getElementById("pass");
-    let logbtn=document.getElementById("log-btn");
+    let loginbtn=document.getElementById("log-in");
 
     let list=JSON.parse(localStorage.getItem("list"))||[];
 
 
-    logbtn.addEventListener("click",()=>{
-        let arr={
-            "no":number.value,
-            "pass":pass.value
-        };
-        list.push(arr);
-        localStorage.setItem("list",JSON.stringify(list));
-        console.log(list);
-    })   
+    loginbtn.addEventListener("click",()=>{
+        let data=list;
+        data.forEach((element) => {
+            if(element.no==number.value){
+                if(element.pass==pass.value){
+                    alert("Log-in-Sucess");
+                }
+                else{
+                    alert("Enter Correct Information");
+                }
+            }
+            // else{
+            //     alert("Enter Correct Information");  
+            // }
+        })
+    });  
 </script>
 </html>

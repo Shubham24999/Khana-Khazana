@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign-up</title>
+    <title>Log In</title>
     <link rel="stylesheet" href="/CSS/header.css" type="text/css">
     <link rel="stylesheet" href="/CSS/footer.css" type="text/css">
     <style>
@@ -46,7 +46,7 @@
                 <img src="https://www.kindmeal.my/images/follow_facebook_grey.png" alt="error">
                 <img src="https://www.kindmeal.my/images/follow_twitter_grey.png" alt="error">
             </div>
-            <div><a href="/login/login.html"><button id="login">Login</button></a></div>          
+            <div><a href="/Signip/Signup.html"><button id="Signup">Sign up</button></a></div>
         </div>
     </div>    
     <div id="nav">
@@ -70,7 +70,7 @@
         <div>
             <input type="password" id="pass" placeholder="Enter Password">
         </div>
-        <div><button id="Signup">Sign up</button></div>
+        <div><button id="log-btn">log in</button></div>
     </div>
     <div id="footer">
         <div>
@@ -150,20 +150,19 @@
 <script>
     let number=document.getElementById("no");
     let pass=document.getElementById("pass");
-    let signupbtn=document.getElementById("Signup");
+    let logbtn=document.getElementById("log-btn");
 
     let list=JSON.parse(localStorage.getItem("list"))||[];
 
 
-    signupbtn.addEventListener("click",()=>{
+    logbtn.addEventListener("click",()=>{
         let arr={
             "no":number.value,
             "pass":pass.value
         };
         list.push(arr);
         localStorage.setItem("list",JSON.stringify(list));
-        // console.log(list);
-        alert("Sign in Success")
-    })
+        console.log(list);
+    })   
 </script>
 </html>

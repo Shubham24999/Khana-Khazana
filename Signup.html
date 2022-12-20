@@ -156,14 +156,20 @@
 
 
     signupbtn.addEventListener("click",()=>{
-        let arr={
-            "no":number.value,
-            "pass":pass.value
-        };
-        list.push(arr);
-        localStorage.setItem("list",JSON.stringify(list));
-        // console.log(list);
-        alert("Sign in Success")
-    })
+        let data=list;
+        data.forEach((element) => {
+            if(element.no==number.value){
+                if(element.pass==pass.value){
+                    alert("Log-in-Sucess");
+                }
+                else{
+                    alert("Enter Correct Information");
+                }
+            }
+            // else{
+            //     alert("Enter Correct Information");  
+            // }
+        })
+    });  
 </script>
 </html>
