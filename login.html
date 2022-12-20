@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -46,7 +47,7 @@
                 <img src="https://www.kindmeal.my/images/follow_facebook_grey.png" alt="error">
                 <img src="https://www.kindmeal.my/images/follow_twitter_grey.png" alt="error">
             </div>
-            <div><a href="/login/login.html"><button id="login">Login</button></a></div>          
+            <div><a href="/Signip/Signup.html"><button id="Signup">Sign in</button></a></div>          
         </div>
     </div>    
     <div id="nav">
@@ -70,7 +71,7 @@
         <div>
             <input type="password" id="pass" placeholder="Enter Password">
         </div>
-        <div><button id="Signup">Sign up</button></div>
+        <div><button id="log-in">log in</button></div>
     </div>
     <div id="footer">
         <div>
@@ -150,20 +151,26 @@
 <script>
     let number=document.getElementById("no");
     let pass=document.getElementById("pass");
-    let signupbtn=document.getElementById("Signup");
+    let loginbtn=document.getElementById("log-in");
 
     let list=JSON.parse(localStorage.getItem("list"))||[];
 
 
-    signupbtn.addEventListener("click",()=>{
-        let arr={
-            "no":number.value,
-            "pass":pass.value
-        };
-        list.push(arr);
-        localStorage.setItem("list",JSON.stringify(list));
-        // console.log(list);
-        alert("Sign in Success")
-    })
+    loginbtn.addEventListener("click",()=>{
+        let data=list;
+        data.forEach((element) => {
+            if(element.no==number.value){
+                if(element.pass==pass.value){
+                    alert("Log-in-Sucess");
+                }
+                else{
+                    alert("Enter Correct Information");
+                }
+            }
+            // else{
+            //     alert("Enter Correct Information");  
+            // }
+        })
+    });  
 </script>
 </html>
